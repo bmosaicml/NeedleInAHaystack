@@ -183,6 +183,7 @@ class LLMNeedleHaystackTester:
                 exception = e
         if response is None:
             print(f"Failed to generate score: {exception.message}")
+            raise e
                 
         results = {
             # 'context' : context, # Uncomment this line if you'd like to save the context the model was asked to retrieve from. Warning: This will become very large.
